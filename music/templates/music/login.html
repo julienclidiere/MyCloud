@@ -1,0 +1,56 @@
+{% extends 'music/base_visitor.html' %}
+{% block title %}Log In{% endblock %}
+{% block login_active %}active{% endblock %}
+
+{% block body %}
+    <div class="main-container">
+        <div class="container" >
+            <div class="row">
+                <div class="col-sm-5 login-box">
+                    <div class="panel panel-default">
+                        <div class="panel-intro text-center">
+                            <h2 class="logo-title" style="font-family: Gabriola; font-size: 50px; color: #c80a48">
+                                <!-- Original Logo will be placed here  -->
+                                Login
+                            </h2>
+                        </div>
+                <div class="panel-body">
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-group" role="form" action="{% url 'music:login_user'%}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label class="control-label" for="id_username">
+                                Username:
+                            </label>
+                            <div class="input-icon"><i class="icon-user fa"></i>
+                                <input id="id_username" maxlength="30" class="form-control" placeholder="Username" name="username" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="id_password">
+                                Password:
+                            </label>
+                            <div class="input-icon"><i class="icon-lock fa"></i>
+                                <input id="id_password" maxlength="30" class="form-control" placeholder="Password" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                                <button type="submit" class="btn btn-success" style="background-color: #c80a48; border-color: #c80a48; color: #ffffff">Submit</button>
+                            </div>
+
+                    </form>
+                </div>
+                <div class="panel-footer" style="color: black">
+                    Don't have an account? <a href="{% url 'music:register' %}">Click here</a> to register.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

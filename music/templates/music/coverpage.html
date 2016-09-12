@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Cloud{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'music/creative.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'music/indexstyle.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'music/js/main.js' %}"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading" style="color:#ffffff; font-family: Gabriola; font-size: 50px; text-align: center"><strong>My Cloud</strong></h1>
+                <hr style="border-color: #c80a48">
+                <p style="font-family: Gabriola; color:#ffffff; font-size: 30px; text-align: center">My Cloud is an application that let's you upload, store, and play all of your music from the cloud. You can now manage and listen to your music from any device, anywhere in the world. You can create an Account or use the username 'admin' and password 'admin' to access to my Account.</p>
+               <a href="{% url 'music:login_user' %}" class="btn btn-primary btn-lg active" role="button" style="font-family: Gabriola; font-size: 25px; background-color: #c80a48">Login</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

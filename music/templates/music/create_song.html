@@ -1,0 +1,61 @@
+{% extends 'music/base.html' %}
+{% block title %}Add a New Song{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                        <a href="{% url 'music:detail' album.id %}">
+                            {% if album.album_logo %}
+                                <img src="{{ album.album_logo.url }}" class="img-responsive">
+                            {% else %}
+                                <h3>No image to display</h3>
+                            {% endif %}
+                        </a>
+                    <h1 style="font-family: Gabriola">{{ album.album_title }}</h1>
+                    <h3 style="font-family: Gabriola">{{ album.artist }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'music:detail' album.id %}" style="background-color: #c80a48; border-color: #c80a48; color:#ffffff">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'music:create_song' album.id %}" style="background-color: #c80a48; border-color: #c80a48; color:#ffffff">Add New Song</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3 style="color:#c80a48; font-family: Gabriola; font-size: 50px; text-align: center">Add a New Song</h3>
+                    <br>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="album" value="{{ album }}">
+                        {% include 'music/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success" style="background-color: #c80a48; border-color: #c80a48">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

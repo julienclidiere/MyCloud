@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* =============================================================== */
+
+/*
+ *
+ *   BOOTCLASIFIED - Responsive Classified Theme
+ *   Copyright 2015 tanimdesign.net
+ *
+*/
+
+/* 	TABLE CONTENT
+
+1. 	 IMPORT
+2.   FOUNDATION
+3. 	 TYPOGRAPHY + GLOBAL CLASS
+4. 	 CUSTOMIZE BOOTSTRAP  [ MODAL + INPUT FORM ELEMENT + BUTTON + ALERT ]
+5. 	 CUSTOMIZE NAVBAR  [ Main Navigation   ]
+6. 	 HOME CONTENT START
+7.	 CATEGORY INTRO
+8. 	 CATEGORY LIST
+9. 	 CATEGORY SIDEBAR
+10.  ADS DETAILS
+11.  LOGIN
+12.  SIGNUP
+13.  POST ADS
+13.  PAGE INTO
+15.  FOOTER
+16.  USER DASHBOARD
+17.  USER PANEL || ACCOUNT
+18.  WEB PAGE PROGRESS BAR CSS
+19.  CUSTOM RESPONSIVE
+20.  USER PANEL || ACCOUNT
+20.  CONTACT || ABOUT
+21.  Index V2
+
+/* =============================================================== */
+/* IMPORT
+/* =============================================================== */
+
+@import url("font-awesome.css");            /* Font Awesome Icon */
+@import url("fontello.css");            /* Font Awesome Icon */
+@import url("longshadow.css");					/* Template Theme color skin */
+@import url("../plugins/jquery.fs.scroller/jquery.fs.scroller.css");					/* jquery.fs.scroller */
+@import url("../plugins/jquery.fs.selecter/jquery.fs.selecter.css");					/* jquery.fs.scroller */
+@import url("fileinput.min.css");		/* css for fileinput.min.js plugin */
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700); /* google webfont */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Roboto+Condensed:300,400,700);
+
+/* =============================================================== */
+/* FOUNDATION
+/* =============================================================== */
+
+/*
+Base Theme Color || If you want to replace a specific known color
+
+@dividerColor:       #e6e6e6;
+
+@linkColor:          #369;
+@linkHoverColor:     #FA7722;
+
+@primaryTextColor	 #333
+@secondaryTextColor: #4e575d;
+
+@btn-default  		 #BDC3C7;
+@btn-default:hover 	 #CACFD2;
+
+@btn-primary  		 #16A085;
+@btn-primary:hover   #149078
+
+@btn-info 			 #e4cb65
+@btn-info:hover      #C1AC59;
+
+@btn-danger 		 #E74C3C;
+@btn-danger:hover	 #EC7063;
+
+@btn-success		 #2ECC71;
+@btn-success:hover	 #58D68D;
+
+
+*/
+
+
+
+/* =============================================================== */
+/* LOGIN
+/* =============================================================== */
+
+div.login-box {
+  float: none;
+  margin: 0 auto;
+  clear: both;
+}
+
+.panel-intro {
+  padding: 40px 0 25px;
+      opacity: 0.8;
+      filter: alpha(opacity=50)
+}
+
+.panel-intro h2 {
+  padding: 0;
+}
+
+div.login-box .panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div.login-box .panel-footer p {
+  margin-top: 10px;
+}
+
+div.login-box .panel-footer label {
+  font-weight: normal;
+}
+
+.login-box-btm {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-box .input-icon i {
+  color: #555;
+  opacity: 0.5;
+  border-right: 1px solid #ccc;
+  padding-right: 5px;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 45px;
+}
+
+.input-icon i {
+  font-size: 16px;
+  left: 6px;
+  line-height: 22px;
+  margin-top: -11px;
+  position: absolute;
+  top: 50%;
+}
+/* =============================================================== */
+/* SIGNUP
+/* =============================================================== */
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 10px;
+}
+
+.mb25 {
+  margin-bottom: 10px;
+}
+
+.mb30 {
+  margin-bottom: 10px;
+}
+
+.mb40 {
+  margin-bottom: 10px;
+}
+
+.mb50 {
+  margin-bottom: 10px;
+}
+
+.mb60 {
+  margin-bottom: 10px;
+}
+
+.promo-text-box {
+  padding: 15px 20px;
+}
+
+.promo-text-box h3 {
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+.icon-color-1 {
+  color: #FF9113;
+}
+
+.icon-color-2 {
+  color: #E6C840;
+}
+
+.icon-color-3 {
+  color: #74C29B;
+}
+/* =============================================================== */
+/* POST ADS
+/* =============================================================== */
+
+
